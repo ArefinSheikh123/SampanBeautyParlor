@@ -334,146 +334,299 @@
       <div id="serviceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Item 1: Hair Spa -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="hair">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Intensive Deep Nourish Hair Spa</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">60 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" 
+                alt="Intensive Deep Nourish Hair Spa" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                60 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Revitalization &amp; Frizz Control</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Custom blend of botanical oils, protein cream, scalp massage, and steam therapy to revive heat-damaged and dry tresses.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Revitalization &amp; Frizz Control</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Intensive Deep Nourish Hair Spa</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Custom blend of botanical oils, protein cream, scalp massage, and steam therapy to revive heat-damaged and dry tresses.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1"></i> Includes Scalp Massage</span>
-            <button onclick="bookSpecificService('Intensive Deep Nourish Hair Spa')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1.5"></i> Scalp Massage</span>
+            <button onclick="bookSpecificService('Intensive Deep Nourish Hair Spa')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 2: Keratin & Rebonding -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="hair">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Silky Keratin &amp; Rebonding Care</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Custom</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" 
+                alt="Silky Keratin & Rebonding Care" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                Custom
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Straightening &amp; Shine</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">High-gloss smoothing treatment ensuring zero damage and naturally flowing straight hair with long-lasting silkiness.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Straightening &amp; High Shine</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Silky Keratin &amp; Rebonding Care</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">High-gloss smoothing treatment ensuring zero damage and naturally flowing straight hair with long-lasting silkiness.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-shield-check text-green-700 mr-1"></i> Formaldehyde-Free</span>
-            <button onclick="bookSpecificService('Silky Keratin & Rebonding')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-shield-check text-green-700 mr-1.5"></i> Gentle Formula</span>
+            <button onclick="bookSpecificService('Silky Keratin & Rebonding')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 3: Glow Facial -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="skin">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="skin">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Gold Brightening Radiance Facial</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">50 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" 
+                alt="Gold Brightening Radiance Facial" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                50 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-3">Signature Skin Glow</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Deep cleansing, enzymatic exfoliation, blackhead extraction, rejuvenating massage, and a clarifying 24k gold leaf peel pack.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Signature Skin Glow</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Gold Brightening Radiance Facial</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Deep cleansing, enzymatic exfoliation, blackhead extraction, rejuvenating massage, and a clarifying 24k gold leaf peel pack.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-flower text-parlour-rosewood mr-1"></i> Instant Dewy Finish</span>
-            <button onclick="bookSpecificService('Gold Brightening Radiance Facial')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-flower text-parlour-rosewood mr-1.5"></i> Dewy Glow</span>
+            <button onclick="bookSpecificService('Gold Brightening Radiance Facial')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 4: Acne & Anti-Tan Therapy -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="skin">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="skin">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Anti-Tan &amp; Detoxifying Therapy</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">45 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1512290900672-1f02e864942c?auto=format&fit=crop&w=800&q=80" 
+                alt="Anti-Tan & Detoxifying Therapy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                45 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Sun Damage Reversal</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Botanical soothing mask designed to heal Dhaka sun exposure, brighten dull skin tones, and cool sensitive epidermal layers.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Sun Damage Reversal</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Anti-Tan &amp; Detoxifying Therapy</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Botanical soothing mask designed to heal Dhaka sun exposure, brighten dull skin tones, and cool sensitive epidermal layers.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-sun text-amber-600 mr-1"></i> Gentle on Sensitive Skin</span>
-            <button onclick="bookSpecificService('Anti-Tan & Detox Therapy')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-sun text-amber-600 mr-1.5"></i> Calming Aloe</span>
+            <button onclick="bookSpecificService('Anti-Tan & Detox Therapy')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 5: Bridal Artistry -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="bridal">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="bridal">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Royal Signature Bridal Makeover</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Full Package</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1546804784-896d0dca3805?auto=format&fit=crop&w=800&q=80" 
+                alt="Royal Signature Bridal Makeover" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                Full Package
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-3">Bespoke Wedding Artistry</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Complete bridal look including HD waterproof base, eye makeup, traditional jewellery setting, dupatta draping, and hair artistry.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Bespoke Wedding Artistry</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Royal Signature Bridal Makeover</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Complete bridal look including HD waterproof base, eye makeup, traditional jewellery setting, dupatta draping, and hair artistry.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-crown text-amber-600 mr-1"></i> Pre-bridal Trials</span>
-            <button onclick="bookSpecificService('Royal Signature Bridal Makeover')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-crown text-amber-600 mr-1.5"></i> Pre-bridal Trials</span>
+            <button onclick="bookSpecificService('Royal Signature Bridal Makeover')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 6: Party Glam Makeover -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="bridal">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="bridal">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Evening &amp; Party Glam Makeover</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">75 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" 
+                alt="Evening & Party Glam Makeover" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                75 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Holud, Reception &amp; Events</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Flawless, sweat-resistant party makeup with custom false lashes and styling that lasts throughout your evening gathering.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Holud, Reception &amp; Events</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Evening &amp; Party Glam Makeover</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Flawless, sweat-resistant party makeup with custom false lashes and styling that lasts throughout your evening gathering.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1"></i> Saree / Outfit Draping</span>
-            <button onclick="bookSpecificService('Evening & Party Glam Makeover')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1.5"></i> Saree Draping</span>
+            <button onclick="bookSpecificService('Evening & Party Glam Makeover')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 7: Spa Manicure & Pedicure -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="spa">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="spa">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Rose Petal Spa Mani-Pedi</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">60 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1519014816548-bf78514125b2?auto=format&fit=crop&w=800&q=80" 
+                alt="Rose Petal Spa Mani-Pedi" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                60 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Exfoliation &amp; Cuticle Care</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Warm herbal soak infused with rose water, exfoliating sugar scrub, paraffin dip options, nail shaping, and relaxing hand-foot massage.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Exfoliation &amp; Cuticle Care</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Rose Petal Spa Mani-Pedi</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Warm herbal soak infused with rose water, exfoliating sugar scrub, paraffin dip options, nail shaping, and relaxing hand-foot massage.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-heart text-parlour-rosewood mr-1"></i> Hygienic Equipment</span>
-            <button onclick="bookSpecificService('Rose Petal Spa Mani-Pedi')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-heart text-parlour-rosewood mr-1.5"></i> Fresh Linens</span>
+            <button onclick="bookSpecificService('Rose Petal Spa Mani-Pedi')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 8: Precision Threading & Waxing -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="spa">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="spa">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Precision Threading &amp; Waxing</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Quick Service</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80" 
+                alt="Precision Threading & Waxing" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                Quick Service
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Gentle Brow &amp; Body Grooming</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Eyebrow architecture, upper lip threading, and smooth Rica wax choices ensuring minimal skin irritation and pain-free smoothness.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Gentle Brow &amp; Body Grooming</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Precision Threading &amp; Waxing</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Eyebrow architecture, upper lip threading, and smooth Rica wax choices ensuring minimal skin irritation and pain-free smoothness.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-feather text-parlour-champagne mr-1"></i> Soothing Aloe Aftercare</span>
-            <button onclick="bookSpecificService('Precision Threading & Waxing')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-feather text-parlour-champagne mr-1.5"></i> Aloe Cooling Gel</span>
+            <button onclick="bookSpecificService('Precision Threading & Waxing')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
         <!-- Item 9: Haircut & Blowdry -->
-        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+        <div class="service-card group rounded-3xl bg-white border border-parlour-blush overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-lg transition duration-500" data-category="hair">
           <div>
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Designer Haircut &amp; Volumizing Blowout</h3>
-              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">40 mins</span>
+            <!-- Service Picture -->
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-parlour-blush">
+              <img 
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" 
+                alt="Designer Haircut & Volumizing Blowout" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="lazy"
+              />
+              <span class="absolute top-3.5 right-3.5 text-[11px] font-semibold text-parlour-rosewood bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                40 mins
+              </span>
             </div>
-            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Layers, Bob, Steps &amp; Styling</span>
-            <p class="text-xs text-parlour-muted leading-relaxed font-light">Tailored haircut honoring your face structure, complemented with an energizing wash, conditioning, and thermal bouncy blowdry.</p>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-1">Layers, Bob, Steps &amp; Styling</span>
+              <h3 class="font-serif text-2xl font-bold text-parlour-charcoal mb-2">Designer Haircut &amp; Volumizing Blowout</h3>
+              <p class="text-xs text-parlour-muted leading-relaxed font-light">Tailored haircut honoring your face structure, complemented with an energizing wash, conditioning, and thermal bouncy blowdry.</p>
+            </div>
           </div>
-          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
-            <span class="text-parlour-muted"><i class="ph-bold ph-scissors text-parlour-charcoal mr-1"></i> Expert Stylist</span>
-            <button onclick="bookSpecificService('Designer Haircut & Blowout')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+
+          <div class="px-6 pb-6 pt-0 border-t border-parlour-blush/60 mt-4 flex items-center justify-between text-xs pt-4">
+            <span class="text-parlour-muted flex items-center"><i class="ph-bold ph-scissors text-parlour-charcoal mr-1.5"></i> Custom Finish</span>
+            <button onclick="bookSpecificService('Designer Haircut & Blowout')" class="font-semibold text-parlour-rosewood hover:text-parlour-charcoal flex items-center gap-1 group/btn">
+              <span>Select &amp; Book</span>
+              <i class="ph-bold ph-arrow-right text-[11px] group-hover/btn:translate-x-0.5 transition-transform"></i>
+            </button>
           </div>
         </div>
 
