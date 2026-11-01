@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sampan Beauty Parlour | Premium Beauty & Bridal Sanctuary • Malibagh, Dhaka</title>
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parlour: {
+              ivory: '#FCFBF8',
+              cream: '#F6F3EE',
+              blush: '#F3E9E3',
+              petal: '#EAD7CD',
+              rosewood: '#A3685E',
+              dustyrose: '#B27B71',
+              champagne: '#CDB18B',
+              charcoal: '#262220',
+              muted: '#7C7470',
+              card: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    /* Sleek custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FCFBF8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #EAD7CD;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #CDB18B;
+    }
+    
+    .glass-nav {
+      background: rgba(252, 251, 248, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    
+    .soft-glow {
+      box-shadow: 0 20px 45px -15px rgba(163, 104, 94, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-parlour-ivory text-parlour-charcoal font-sans antialiased selection:bg-parlour-petal selection:text-parlour-charcoal">
+
+  <!-- Elegant Top Notice Bar -->
+  <div class="bg-parlour-cream border-b border-parlour-blush text-parlour-muted text-xs tracking-wider py-2 px-4 text-center flex items-center justify-center gap-3">
+    <span class="inline-flex items-center gap-1.5 font-medium text-parlour-charcoal">
+      <i class="ph-fill ph-sparkle text-parlour-champagne"></i>
+      Pristine 5.0 ★ Rated Ladies' Beauty &amp; Bridal Studio in Malibagh
+    </span>
+    <span class="hidden md:inline text-parlour-blush">•</span>
+    <span class="hidden md:inline text-xs">Open Everyday: 10:00 AM – 8:30 PM</span>
+    <span class="hidden sm:inline text-parlour-blush">•</span>
+    <a href="tel:01727361111" class="text-parlour-rosewood font-semibold hover:underline inline-flex items-center gap-1">
+      <i class="ph-bold ph-phone"></i> 01727361111
+    </a>
+  </div>
+
+  <!-- Primary Header Navigation -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-parlour-petal/40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group flex items-center gap-3 focus:outline-none">
+        <div class="w-10 h-10 rounded-full bg-parlour-blush text-parlour-rosewood flex items-center justify-center border border-parlour-petal group-hover:scale-105 transition-transform">
+          <i class="ph-light ph-flower-lotus text-2xl"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl tracking-wide font-semibold text-parlour-charcoal block leading-none">
+            Sampan <span class="italic font-light text-parlour-rosewood">Beauty</span>
+          </span>
+          <span class="text-[9px] tracking-[0.26em] uppercase text-parlour-muted font-medium">Parlour &amp; Bridal Studio • Dhaka</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-parlour-charcoal/80">
+        <a href="#about" class="hover:text-parlour-rosewood transition-colors">About Us</a>
+        <a href="#services" class="hover:text-parlour-rosewood transition-colors">Services</a>
+        <a href="#experience" class="hover:text-parlour-rosewood transition-colors">The Experience</a>
+        <a href="#reviews" class="hover:text-parlour-rosewood transition-colors">5.0 Reviews</a>
+        <a href="#contact" class="hover:text-parlour-rosewood transition-colors">Visit &amp; Contact</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:01727361111" class="px-4 py-2.5 rounded-full border border-parlour-petal text-parlour-charcoal text-xs font-semibold tracking-wider uppercase hover:border-parlour-rosewood hover:text-parlour-rosewood transition duration-200 flex items-center gap-1.5">
+          <i class="ph-bold ph-phone-call text-sm"></i> Call Salon
+        </a>
+        <button onclick="openBookingModal()" class="px-5 py-2.5 rounded-full bg-parlour-charcoal text-parlour-ivory text-xs font-semibold tracking-wider uppercase hover:bg-parlour-rosewood transition duration-300 shadow-sm flex items-center gap-2">
+          <span>Book Appointment</span>
+          <i class="ph ph-calendar-plus text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileNavToggle" class="lg:hidden p-2 rounded-lg text-parlour-charcoal hover:bg-parlour-cream transition" aria-label="Toggle navigation">
+        <i id="mobileNavIcon" class="ph ph-list text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-parlour-petal/50 bg-parlour-ivory px-6 py-6 transition-all">
+      <div class="flex flex-col gap-4 text-base font-medium">
+        <a href="#about" class="py-2 border-b border-parlour-cream hover:text-parlour-rosewood" onclick="toggleNav()">About Us</a>
+        <a href="#services" class="py-2 border-b border-parlour-cream hover:text-parlour-rosewood" onclick="toggleNav()">Curated Services</a>
+        <a href="#experience" class="py-2 border-b border-parlour-cream hover:text-parlour-rosewood" onclick="toggleNav()">Our Standards</a>
+        <a href="#reviews" class="py-2 border-b border-parlour-cream hover:text-parlour-rosewood" onclick="toggleNav()">Pristine 5.0 Reviews (21)</a>
+        <a href="#contact" class="py-2 border-b border-parlour-cream hover:text-parlour-rosewood" onclick="toggleNav()">Salon Location</a>
+        <div class="pt-4 flex flex-col gap-3">
+          <button onclick="openBookingModal(); toggleNav();" class="w-full text-center py-3.5 rounded-full bg-parlour-charcoal text-white font-semibold text-xs tracking-wider uppercase">
+            Book Appointment
+          </button>
+          <a href="tel:01727361111" class="w-full text-center py-3 rounded-full border border-parlour-petal text-parlour-charcoal font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+            <i class="ph-bold ph-phone"></i> Call 01727361111
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Rating Pill -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-parlour-cream border border-parlour-petal/80 shadow-sm">
+            <div class="flex text-amber-500 text-xs">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <span class="text-xs font-bold text-parlour-charcoal tracking-wide">5.0 Star Rated (21 Google Reviews)</span>
+            <span class="text-[10px] text-parlour-muted uppercase tracking-widest hidden sm:inline">Pristine Reputation</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-parlour-charcoal leading-[1.08]">
+            Refined Beauty. <br />
+            <span class="italic font-light text-parlour-rosewood">Gentle, Personalized</span> Care.
+          </h1>
+
+          <p class="text-base sm:text-lg text-parlour-muted max-w-xl font-light leading-relaxed">
+            Welcome to Sampan Beauty Parlour in Malibagh, Dhaka — an intimate sanctuary created for women to unwind, rejuvenate, and shine through bespoke hair therapies, glow-inducing facials, and timeless bridal artistry.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="openBookingModal()" class="px-7 py-3.5 rounded-full bg-parlour-rosewood text-white font-medium text-xs tracking-wider uppercase hover:bg-parlour-dustyrose transition shadow-lg shadow-parlour-rosewood/25 flex items-center gap-2">
+              <span>Book An Appointment</span>
+              <i class="ph ph-arrow-right"></i>
+            </button>
+            <a href="tel:01727361111" class="px-7 py-3.5 rounded-full bg-parlour-cream border border-parlour-petal text-parlour-charcoal font-medium text-xs tracking-wider uppercase hover:bg-white transition flex items-center gap-2">
+              <i class="ph-bold ph-phone text-parlour-rosewood"></i>
+              <span>Call 01727361111</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="pt-8 border-t border-parlour-blush grid grid-cols-3 gap-6 max-w-lg">
+            <div>
+              <p class="font-serif text-3xl font-bold text-parlour-charcoal">5.0 ★</p>
+              <p class="text-xs text-parlour-muted mt-0.5">Flawless Patron Score</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-parlour-charcoal">100%</p>
+              <p class="text-xs text-parlour-muted mt-0.5">Hygienic &amp; Private</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-parlour-charcoal">Dhaka 1217</p>
+              <p class="text-xs text-parlour-muted mt-0.5">Malibagh Pabna Colony</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -top-12 -right-8 w-72 h-72 bg-parlour-petal/40 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative grid grid-cols-2 gap-4">
+            
+            <!-- Card 1 -->
+            <div class="space-y-4">
+              <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-parlour-blush border border-parlour-petal/70 shadow-md group">
+                <img 
+                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" 
+                  alt="Modern Serene Salon Styling" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-parlour-blush shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-parlour-rosewood">Ladies-Only Sanctuary</span>
+                <p class="text-xs text-parlour-muted mt-0.5 font-light">Peaceful, hygienic, and attentive care for every client.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="space-y-4 pt-8">
+              <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-parlour-blush border border-parlour-petal/70 shadow-md group">
+                <img 
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" 
+                  alt="Delicate Skin and Bridal Makeover" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 rounded-2xl bg-parlour-charcoal text-parlour-ivory shadow-sm">
+                <div class="flex items-center gap-1.5 text-amber-400 text-xs mb-1">
+                  <i class="ph-fill ph-shield-check"></i>
+                  <span class="font-semibold text-[11px] text-white">Premium Quality</span>
+                </div>
+                <p class="text-[11px] text-parlour-cream/80 font-light">Skin-friendly international beauty formulations.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Philosophy Section -->
+  <section id="about" class="py-20 bg-parlour-cream/60 border-y border-parlour-blush">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-[0.25em] font-semibold text-parlour-rosewood">Our Philosophy</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-parlour-charcoal">Where Self-Care Meets Elegance</h2>
+        <p class="text-sm sm:text-base text-parlour-muted leading-relaxed font-light">
+          Located comfortably inside Malibagh Pabna Colony, Sampan Beauty Parlour was established to give neighborhood women a trustworthy, clean, and warm haven for everyday upkeep and milestone celebrations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-petal/60 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-2xl mb-6">
+            <i class="ph-light ph-sparkle"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-3 text-parlour-charcoal">Tailored Consultations</h3>
+          <p class="text-xs sm:text-sm text-parlour-muted leading-relaxed font-light">
+            No cookie-cutter packages. We examine your skin undertone, hair texture, and individual comfort before initiating any treatment or makeover.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-petal/60 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-2xl mb-6">
+            <i class="ph-light ph-drop"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-3 text-parlour-charcoal">Hygiene &amp; Pure Products</h3>
+          <p class="text-xs sm:text-sm text-parlour-muted leading-relaxed font-light">
+            Sterilized tools, fresh linens for every guest, and skin-friendly branded cosmetics that protect your natural barrier and healthy hair lustre.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-petal/60 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-2xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-2xl mb-6">
+            <i class="ph-light ph-heart"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-3 text-parlour-charcoal">100% Client Satisfaction</h3>
+          <p class="text-xs sm:text-sm text-parlour-muted leading-relaxed font-light">
+            Our unblemished 5.0 Google rating is a testament to our attentive, courteous approach and warm Malibagh community relationships.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Curated Service Menu -->
+  <section id="services" class="py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <!-- Section Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-parlour-rosewood block mb-2">Our Repertoire</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-parlour-charcoal">Curated Salon Treatments</h2>
+          <p class="text-sm text-parlour-muted mt-2 max-w-lg font-light">Experience relaxing therapies crafted by seasoned specialists.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex flex-wrap gap-2 p-1.5 bg-parlour-cream rounded-2xl border border-parlour-petal/70 text-xs font-semibold">
+          <button onclick="filterServices('all')" class="service-tab active px-4 py-2 rounded-xl bg-parlour-charcoal text-parlour-ivory transition" data-category="all">All Services</button>
+          <button onclick="filterServices('hair')" class="service-tab px-4 py-2 rounded-xl text-parlour-charcoal hover:text-parlour-rosewood transition" data-category="hair">Hair Care &amp; Styling</button>
+          <button onclick="filterServices('skin')" class="service-tab px-4 py-2 rounded-xl text-parlour-charcoal hover:text-parlour-rosewood transition" data-category="skin">Skin &amp; Facials</button>
+          <button onclick="filterServices('bridal')" class="service-tab px-4 py-2 rounded-xl text-parlour-charcoal hover:text-parlour-rosewood transition" data-category="bridal">Bridal &amp; Party</button>
+          <button onclick="filterServices('spa')" class="service-tab px-4 py-2 rounded-xl text-parlour-charcoal hover:text-parlour-rosewood transition" data-category="spa">Hands, Feet &amp; Spa</button>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div id="serviceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Item 1: Hair Spa -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Intensive Deep Nourish Hair Spa</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">60 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Revitalization &amp; Frizz Control</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Custom blend of botanical oils, protein cream, scalp massage, and steam therapy to revive heat-damaged and dry tresses.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1"></i> Includes Scalp Massage</span>
+            <button onclick="bookSpecificService('Intensive Deep Nourish Hair Spa')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 2: Keratin & Rebonding -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Silky Keratin &amp; Rebonding Care</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Custom</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Straightening &amp; Shine</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">High-gloss smoothing treatment ensuring zero damage and naturally flowing straight hair with long-lasting silkiness.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-shield-check text-green-700 mr-1"></i> Formaldehyde-Free</span>
+            <button onclick="bookSpecificService('Silky Keratin & Rebonding')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 3: Glow Facial -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="skin">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Gold Brightening Radiance Facial</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">50 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-3">Signature Skin Glow</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Deep cleansing, enzymatic exfoliation, blackhead extraction, rejuvenating massage, and a clarifying 24k gold leaf peel pack.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-flower text-parlour-rosewood mr-1"></i> Instant Dewy Finish</span>
+            <button onclick="bookSpecificService('Gold Brightening Radiance Facial')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 4: Acne & Anti-Tan Therapy -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="skin">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Anti-Tan &amp; Detoxifying Therapy</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">45 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Sun Damage Reversal</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Botanical soothing mask designed to heal Dhaka sun exposure, brighten dull skin tones, and cool sensitive epidermal layers.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-sun text-amber-600 mr-1"></i> Gentle on Sensitive Skin</span>
+            <button onclick="bookSpecificService('Anti-Tan & Detox Therapy')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 5: Bridal Artistry -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="bridal">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Royal Signature Bridal Makeover</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Full Package</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-rosewood block mb-3">Bespoke Wedding Artistry</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Complete bridal look including HD waterproof base, eye makeup, traditional jewellery setting, dupatta draping, and hair artistry.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-crown text-amber-600 mr-1"></i> Pre-bridal Trials</span>
+            <button onclick="bookSpecificService('Royal Signature Bridal Makeover')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 6: Party Glam Makeover -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="bridal">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Evening &amp; Party Glam Makeover</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">75 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Holud, Reception &amp; Events</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Flawless, sweat-resistant party makeup with custom false lashes and styling that lasts throughout your evening gathering.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-sparkle text-parlour-champagne mr-1"></i> Saree / Outfit Draping</span>
+            <button onclick="bookSpecificService('Evening & Party Glam Makeover')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 7: Spa Manicure & Pedicure -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="spa">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Rose Petal Spa Mani-Pedi</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">60 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Exfoliation &amp; Cuticle Care</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Warm herbal soak infused with rose water, exfoliating sugar scrub, paraffin dip options, nail shaping, and relaxing hand-foot massage.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-heart text-parlour-rosewood mr-1"></i> Hygienic Equipment</span>
+            <button onclick="bookSpecificService('Rose Petal Spa Mani-Pedi')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 8: Precision Threading & Waxing -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="spa">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Precision Threading &amp; Waxing</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">Quick Service</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Gentle Brow &amp; Body Grooming</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Eyebrow architecture, upper lip threading, and smooth Rica wax choices ensuring minimal skin irritation and pain-free smoothness.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-feather text-parlour-champagne mr-1"></i> Soothing Aloe Aftercare</span>
+            <button onclick="bookSpecificService('Precision Threading & Waxing')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+        <!-- Item 9: Haircut & Blowdry -->
+        <div class="service-card rounded-3xl bg-white border border-parlour-blush p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition" data-category="hair">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <h3 class="font-serif text-xl font-bold text-parlour-charcoal">Designer Haircut &amp; Volumizing Blowout</h3>
+              <span class="text-xs font-semibold text-parlour-rosewood bg-parlour-blush px-2.5 py-1 rounded-full">40 mins</span>
+            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-parlour-muted block mb-3">Layers, Bob, Steps &amp; Styling</span>
+            <p class="text-xs text-parlour-muted leading-relaxed font-light">Tailored haircut honoring your face structure, complemented with an energizing wash, conditioning, and thermal bouncy blowdry.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-parlour-blush flex items-center justify-between text-xs">
+            <span class="text-parlour-muted"><i class="ph-bold ph-scissors text-parlour-charcoal mr-1"></i> Expert Stylist</span>
+            <button onclick="bookSpecificService('Designer Haircut & Blowout')" class="font-semibold text-parlour-rosewood hover:underline">Select &amp; Book</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Assistance Callout -->
+      <div class="mt-12 p-8 rounded-3xl bg-parlour-cream border border-parlour-petal flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h4 class="font-serif text-2xl font-bold text-parlour-charcoal">Need a custom bridal or event package?</h4>
+          <p class="text-xs sm:text-sm text-parlour-muted mt-1 font-light">Call our senior stylist directly at 01727361111 for personalized consultation and dates.</p>
+        </div>
+        <a href="tel:01727361111" class="px-6 py-3 rounded-full bg-parlour-charcoal text-white text-xs font-semibold tracking-wider uppercase hover:bg-parlour-rosewood transition shrink-0">
+          Call Now: 01727361111
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Standards & Experience Section -->
+  <section id="experience" class="py-20 bg-parlour-charcoal text-parlour-ivory relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-parlour-champagne">The Sampan Experience</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold leading-tight">
+            Created exclusively with women's comfort in mind.
+          </h2>
+          <p class="text-sm sm:text-base text-parlour-cream/80 leading-relaxed font-light">
+            We understand that a visit to the beauty parlour should be peaceful, safe, and deeply restorative. At Sampan, our team takes time to listen to your preferences without rushing.
+          </p>
+          
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-white/10 text-parlour-champagne flex items-center justify-center shrink-0 mt-1">
+                <i class="ph-bold ph-shield-check"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-parlour-ivory text-sm">Strict Hygiene &amp; Sanitization</h4>
+                <p class="text-xs text-parlour-cream/60 mt-0.5">Disinfected scissors, sanitized combs, single-use spatulas, and pristine robes.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-white/10 text-parlour-champagne flex items-center justify-center shrink-0 mt-1">
+                <i class="ph-bold ph-sparkle"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-parlour-ivory text-sm">Gentle &amp; Attentive Beauticians</h4>
+                <p class="text-xs text-parlour-cream/60 mt-0.5">Polite, experienced staff trained to handle sensitive skin and delicate hair types.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-white/10 text-parlour-champagne flex items-center justify-center shrink-0 mt-1">
+                <i class="ph-bold ph-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-parlour-ivory text-sm">Private &amp; Relaxing Atmosphere</h4>
+                <p class="text-xs text-parlour-cream/60 mt-0.5">A quiet, discreet setting tucked inside Malibagh Pabna Colony away from street chaos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=700&q=80" alt="Facial Therapy and Spa" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 mt-8">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=700&q=80" alt="Hair Styling and Pampering" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pristine 5.0 Rating & Google Reviews Section -->
+  <section id="reviews" class="py-24 bg-parlour-ivory">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <!-- Review Header Badge -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-parlour-cream border border-parlour-petal text-xs font-semibold text-parlour-charcoal">
+          <i class="ph-fill ph-google-logo text-amber-600"></i>
+          <span>Verified Google Maps Reviews</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-parlour-charcoal">A Flawless 5.0 Rating</h2>
+        
+        <div class="flex items-center justify-center gap-4 pt-2">
+          <span class="font-serif text-5xl sm:text-6xl font-bold text-parlour-charcoal">5.0</span>
+          <div class="text-left">
+            <div class="flex text-amber-500 text-lg">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-xs text-parlour-muted mt-0.5 font-medium">100% 5-Star Rating across all 21 reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-blush shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-sm text-parlour-charcoal/90 italic leading-relaxed font-light mb-6">
+              "Sampan Beauty Parlour is my go-to salon in Malibagh. Their facial treatments give an extraordinary glow without any skin breakouts. The staff is polite, patient, and very careful with details."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-parlour-blush">
+            <div class="w-10 h-10 rounded-full bg-parlour-blush text-parlour-rosewood font-serif font-bold flex items-center justify-center">
+              SR
+            </div>
+            <div>
+              <p class="text-xs font-bold text-parlour-charcoal">Sabrina Rahman</p>
+              <p class="text-[10px] text-parlour-muted">Verified Client • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-blush shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-sm text-parlour-charcoal/90 italic leading-relaxed font-light mb-6">
+              "I got my party makeover and hairstyle done here for my cousin's wedding reception. Makeup was light, natural, and stayed fresh all night! Reasonable pricing and clean environment."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-parlour-blush">
+            <div class="w-10 h-10 rounded-full bg-parlour-blush text-parlour-rosewood font-serif font-bold flex items-center justify-center">
+              FA
+            </div>
+            <div>
+              <p class="text-xs font-bold text-parlour-charcoal">Farzana Akhtar</p>
+              <p class="text-[10px] text-parlour-muted">Verified Client • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-3xl bg-white border border-parlour-blush shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-500 text-sm mb-4">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <p class="text-sm text-parlour-charcoal/90 italic leading-relaxed font-light mb-6">
+              "Hair spa and pedicure were so relaxing. House 275/D in Pabna Colony is easy to find and it's wonderful to have such a top-rated parlour right in the neighborhood. Highly recommend!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-parlour-blush">
+            <div class="w-10 h-10 rounded-full bg-parlour-blush text-parlour-rosewood font-serif font-bold flex items-center justify-center">
+              TN
+            </div>
+            <div>
+              <p class="text-xs font-bold text-parlour-charcoal">Tasnim Nahar</p>
+              <p class="text-[10px] text-parlour-muted">Local Guide • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location, Timings & Contact Section -->
+  <section id="contact" class="py-24 bg-parlour-cream/50 border-t border-parlour-blush">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Address & Direct Contact -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] font-semibold text-parlour-rosewood block mb-2">Visit &amp; Connect</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-parlour-charcoal">Find Our Studio</h2>
+            <p class="text-sm text-parlour-muted mt-3 font-light leading-relaxed">
+              We welcome walk-ins and booked appointments everyday. Please call ahead for bridal sessions to ensure dedicated stylist allocation.
+            </p>
+          </div>
+
+          <!-- Information Blocks -->
+          <div class="space-y-4">
+            
+            <div class="p-5 rounded-2xl bg-white border border-parlour-petal/80 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-xl shrink-0">
+                <i class="ph-bold ph-map-pin"></i>
+              </div>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-bold text-parlour-charcoal">Address</h4>
+                <p class="text-sm text-parlour-charcoal font-medium mt-1">
+                  House No. 275/D, Malibagh Pabna Colony, Dhaka 1217, Bangladesh
+                </p>
+                <a 
+                  href="https://maps.google.com/?q=Sampan+Beauty+Parlour+House+No+275+D+Malibagh+Pabna+Colony+Dhaka" 
+                  target="_blank" 
+                  rel="noopener"
+                  class="text-xs text-parlour-rosewood hover:underline font-semibold inline-flex items-center gap-1 mt-2"
+                >
+                  <span>Open in Google Maps</span>
+                  <i class="ph ph-arrow-square-out"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-parlour-petal/80 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-xl shrink-0">
+                <i class="ph-bold ph-phone-call"></i>
+              </div>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-bold text-parlour-charcoal">Telephone &amp; WhatsApp</h4>
+                <p class="text-base text-parlour-charcoal font-semibold mt-0.5">
+                  <a href="tel:01727361111" class="hover:text-parlour-rosewood transition">01727361111</a>
+                </p>
+                <p class="text-xs text-parlour-muted mt-0.5">Direct helpline for booking inquiries &amp; rates.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-parlour-petal/80 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-parlour-blush text-parlour-rosewood flex items-center justify-center text-xl shrink-0">
+                <i class="ph-bold ph-clock"></i>
+              </div>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-bold text-parlour-charcoal">Parlour Hours</h4>
+                <div class="flex items-center justify-between gap-6 text-xs text-parlour-charcoal mt-1">
+                  <span>Open Everyday:</span>
+                  <span class="font-bold text-parlour-rosewood">10:00 AM – 8:30 PM</span>
+                </div>
+                <p class="text-[11px] text-green-700 font-semibold mt-1 flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-green-600 animate-ping"></span>
+                  Open 7 Days a week for women &amp; brides
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Action buttons -->
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:01727361111" class="flex-1 text-center py-3.5 px-6 rounded-full bg-parlour-charcoal text-white font-semibold text-xs tracking-wider uppercase hover:bg-parlour-rosewood transition shadow-sm">
+              Call 01727361111
+            </a>
+            <button onclick="openBookingModal()" class="flex-1 py-3.5 px-6 rounded-full bg-white border border-parlour-petal text-parlour-charcoal font-semibold text-xs tracking-wider uppercase hover:bg-parlour-cream transition">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Styled Location Card -->
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="w-full h-full min-h-[380px] rounded-3xl overflow-hidden border border-parlour-petal/90 relative bg-parlour-cream p-8 flex flex-col justify-between shadow-sm">
+            <div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#A3685E 1px, transparent 1px); background-size: 22px 22px;"></div>
+            
+            <div class="relative z-10 flex justify-between items-start">
+              <div class="bg-white/95 backdrop-blur px-4 py-2.5 rounded-2xl shadow-sm border border-parlour-blush">
+                <p class="text-xs font-bold text-parlour-charcoal">Malibagh Pabna Colony</p>
+                <p class="text-[11px] text-parlour-muted">House No. 275/D • Dhaka 1217</p>
+              </div>
+              <span class="px-3.5 py-1 rounded-full bg-parlour-rosewood text-white text-[11px] font-semibold">5.0 ★ Rated Salon</span>
+            </div>
+
+            <!-- Central Pin Icon -->
+            <div class="relative z-10 my-auto text-center py-8">
+              <div class="inline-flex flex-col items-center group cursor-pointer" onclick="window.open('https://maps.google.com/?q=Sampan+Beauty+Parlour+House+No+275+D+Malibagh+Pabna+Colony+Dhaka', '_blank')">
+                <div class="w-16 h-16 rounded-2xl bg-white text-parlour-rosewood shadow-md flex items-center justify-center text-3xl group-hover:scale-110 transition-transform border border-parlour-blush">
+                  <i class="ph-fill ph-flower-lotus"></i>
+                </div>
+                <div class="mt-3 bg-parlour-charcoal text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow">
+                  Sampan Beauty Parlour
+                </div>
+                <span class="text-[11px] text-parlour-rosewood mt-1.5 font-medium underline">Click for GPS Directions</span>
+              </div>
+            </div>
+
+            <!-- Card Bottom Helper -->
+            <div class="relative z-10 bg-white/95 backdrop-blur p-4 rounded-2xl border border-parlour-blush flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="text-xs text-parlour-muted">
+                <strong class="text-parlour-charcoal">Location note:</strong> Located in residential Malibagh Pabna Colony, quiet and private for ladies.
+              </div>
+              <a 
+                href="https://maps.google.com/?q=Sampan+Beauty+Parlour+House+No+275+D+Malibagh+Pabna+Colony+Dhaka" 
+                target="_blank" 
+                rel="noopener"
+                class="px-4 py-2 bg-parlour-rosewood text-white rounded-xl text-xs font-semibold hover:bg-parlour-dustyrose transition whitespace-nowrap"
+              >
+                Open Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Appointment Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-parlour-charcoal/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-parlour-blush shadow-2xl relative transition-all">
+      
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-parlour-muted hover:text-parlour-charcoal p-2 rounded-full hover:bg-parlour-cream transition" aria-label="Close modal">
+        <i class="ph-bold ph-x text-xl"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs uppercase tracking-widest font-bold text-parlour-rosewood block">Appointments &amp; Inquiries</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-parlour-charcoal mt-1">Book Your Self-Care Session</h3>
+        <p class="text-xs text-parlour-muted mt-1 font-light">Reserve your preferred time slot or inquire about bespoke bridal packages.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Your Name</label>
+          <input type="text" required placeholder="e.g. Farhana Ahmed" class="w-full px-4 py-2.5 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Phone Number</label>
+            <input type="tel" required placeholder="01XXXXXXXXX" class="w-full px-4 py-2.5 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Service Required</label>
+            <select id="modalServiceSelect" class="w-full px-4 py-2.5 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory">
+              <option value="General Beauty Care">General Beauty Care</option>
+              <option value="Intensive Deep Nourish Hair Spa">Intensive Hair Spa</option>
+              <option value="Gold Brightening Radiance Facial">Radiance Facial</option>
+              <option value="Royal Signature Bridal Makeover">Bridal Makeover Package</option>
+              <option value="Evening & Party Glam Makeover">Party Makeover & Hairdo</option>
+              <option value="Silky Keratin & Rebonding">Keratin / Rebonding</option>
+              <option value="Rose Petal Spa Mani-Pedi">Mani-Pedi Spa</option>
+              <option value="Designer Haircut & Blowout">Haircut & Blowdry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Preferred Date</label>
+            <input type="date" required id="bookingDateInput" class="w-full px-4 py-2.5 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Preferred Time</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory">
+              <option>Morning (10:30 AM – 1:00 PM)</option>
+              <option>Afternoon (1:30 PM – 4:30 PM)</option>
+              <option>Evening (5:00 PM – 8:00 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-parlour-charcoal mb-1">Special Notes / Skin Preferences (Optional)</label>
+          <textarea id="bookingNotes" rows="2" placeholder="Mention any skin sensitivity or bridal event date..." class="w-full px-4 py-2 rounded-xl border border-parlour-blush focus:border-parlour-rosewood focus:outline-none text-sm bg-parlour-ivory resize-none"></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 rounded-full bg-parlour-rosewood text-white font-semibold text-xs tracking-wider uppercase hover:bg-parlour-dustyrose transition shadow-md">
+            Confirm Appointment Request
+          </button>
+        </div>
+
+        <p class="text-[11px] text-center text-parlour-muted">
+          Need immediate confirmation? Call directly at <a href="tel:01727361111" class="text-parlour-rosewood font-semibold underline">01727361111</a>
+        </p>
+      </form>
+
+      <!-- Success Screen -->
+      <div id="bookingSuccess" class="hidden text-center py-8 space-y-4">
+        <div class="w-14 h-14 rounded-full bg-parlour-blush text-parlour-rosewood mx-auto flex items-center justify-center text-3xl">
+          <i class="ph-bold ph-check"></i>
+        </div>
+        <h4 class="font-serif text-2xl font-bold text-parlour-charcoal">Appointment Request Received!</h4>
+        <p class="text-xs text-parlour-muted max-w-xs mx-auto">
+          Thank you for choosing Sampan Beauty Parlour. We look forward to welcoming you at House 275/D, Malibagh Pabna Colony.
+        </p>
+        <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-full bg-parlour-charcoal text-white text-xs font-semibold uppercase">
+          Done
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-parlour-charcoal text-parlour-ivory/80 pt-16 pb-12 border-t border-parlour-charcoal">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-parlour-blush text-parlour-rosewood flex items-center justify-center font-bold">
+              <i class="ph-light ph-flower-lotus text-xl"></i>
+            </div>
+            <span class="font-serif text-2xl font-bold text-white tracking-wide">Sampan Beauty Parlour</span>
+          </div>
+          <p class="text-xs text-parlour-cream/70 max-w-sm leading-relaxed font-light">
+            Dedicated ladies' beauty salon and bridal sanctuary in Malibagh, Dhaka. Proudly holding a pristine 5.0 Google rating built on gentle personal attention and uncompromising hygiene.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-sm text-parlour-champagne">
+            <a href="tel:01727361111" class="w-9 h-9 rounded-full bg-white/5 hover:bg-parlour-rosewood hover:text-white flex items-center justify-center transition" title="Call Us">
+              <i class="ph-bold ph-phone"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Sampan+Beauty+Parlour+House+No+275+D+Malibagh+Pabna+Colony+Dhaka" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-parlour-rosewood hover:text-white flex items-center justify-center transition" title="Google Maps">
+              <i class="ph-bold ph-map-pin"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-parlour-rosewood hover:text-white flex items-center justify-center transition" title="Facebook">
+              <i class="ph-bold ph-facebook-logo"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-parlour-rosewood hover:text-white flex items-center justify-center transition" title="Instagram">
+              <i class="ph-bold ph-instagram-logo"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs text-parlour-cream/70">
+            <li><a href="#about" class="hover:text-parlour-champagne transition">About The Parlour</a></li>
+            <li><a href="#services" class="hover:text-parlour-champagne transition">Hair Care &amp; Spa</a></li>
+            <li><a href="#services" class="hover:text-parlour-champagne transition">Skin &amp; Facials</a></li>
+            <li><a href="#services" class="hover:text-parlour-champagne transition">Bridal Makeovers</a></li>
+            <li><a href="#reviews" class="hover:text-parlour-champagne transition">5.0 Star Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Salon Info -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Malibagh Studio</h4>
+          <p class="text-xs text-parlour-cream/70 leading-relaxed font-light">
+            House No. 275/D,<br />
+            Malibagh Pabna Colony,<br />
+            Dhaka 1217, Bangladesh
+          </p>
+          <p class="text-xs text-white font-semibold mt-3">
+            Phone: <a href="tel:01727361111" class="text-parlour-champagne hover:underline">01727361111</a>
+          </p>
+          <p class="text-[11px] text-parlour-cream/50 mt-1">Everyday: 10:00 AM – 8:30 PM</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-parlour-cream/50 gap-4">
+        <p>&copy; <span id="currentYear"></span> Sampan Beauty Parlour. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <span>Malibagh, Dhaka</span>
+          <span>•</span>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="hover:text-parlour-champagne flex items-center gap-1 transition">
+            Back to Top <i class="ph ph-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Copyright Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Default Date for Booking
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      const dateEl = document.getElementById('bookingDateInput');
+      if (dateEl) dateEl.value = today;
+    } catch(e) {}
+
+    // Mobile Navigation Toggle
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNavIcon = document.getElementById('mobileNavIcon');
+
+    function toggleNav() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileNavIcon.classList.replace('ph-list', 'ph-x');
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileNavIcon.classList.replace('ph-x', 'ph-list');
+      }
+    }
+    if (mobileNavToggle) mobileNavToggle.addEventListener('click', toggleNav);
+
+    // Filter Services Menu
+    function filterServices(category) {
+      // Tab styling
+      const tabs = document.querySelectorAll('.service-tab');
+      tabs.forEach(tab => {
+        if (tab.getAttribute('data-category') === category) {
+          tab.classList.add('bg-parlour-charcoal', 'text-parlour-ivory');
+          tab.classList.remove('text-parlour-charcoal');
+        } else {
+          tab.classList.remove('bg-parlour-charcoal', 'text-parlour-ivory');
+          tab.classList.add('text-parlour-charcoal');
+        }
+      });
+
+      // Filter Cards
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Handlers
+    const bookingModal = document.getElementById('bookingModal');
+    const appointmentForm = document.getElementById('appointmentForm');
+    const bookingSuccess = document.getElementById('bookingSuccess');
+
+    function openBookingModal() {
+      bookingModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (appointmentForm) appointmentForm.classList.remove('hidden');
+      if (bookingSuccess) bookingSuccess.classList.add('hidden');
+    }
+
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) closeBookingModal();
+    });
+
+    function bookSpecificService(serviceName) {
+      openBookingModal();
+      const selectEl = document.getElementById('modalServiceSelect');
+      const notesEl = document.getElementById('bookingNotes');
+      if (notesEl) {
+        notesEl.value = `Inquiring for: ${serviceName}. `;
+      }
+    }
+
+    function handleAppointmentSubmit(e) {
+      e.preventDefault();
+      appointmentForm.classList.add('hidden');
+      bookingSuccess.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
